@@ -5,3 +5,7 @@
 @import 'global';
 
 
+.text{
+    @include m500;
+    font-size: 100px;
+}
