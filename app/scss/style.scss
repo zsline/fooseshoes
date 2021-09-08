@@ -1,11 +1,176 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
 
+.header {
+    &__black {
+        background-color: $black;
+        color: $grey;
+        min-height: 46px;
+        &-logo {
+            @include m500;
+            font-size: 25px;
+            text-transform: uppercase;
+            color: $accent;
+        }
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+        }
+        &-login {
+            font-size: 11px;
+            display: flex;
+            text-transform: uppercase;
+            align-items: center;
+            span {
+                text-transform: lowercase;
+                margin: 5px;
+            }
+        }
+    }
+    &__white {
+        background-color: #fff;
 
-.text{
-    @include m500;
-    font-size: 100px;
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 60px;
+            height: 100%;
+        }
+    }
+    &__nav {
+        &-list {
+            display: flex;
+        }
+        &-item {
+            padding: 0 20px;
+            font-size: 16px;
+            min-height: 60px;
+            color: $black;
+            border-left: 1px solid $grey;
+            display: flex;
+            align-items: center;
+        }
+        &-item:last-child {
+            border-right: 1px solid $grey;
+        }
+    }
+    &__stat {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-raiting {
+            padding: 0 20px 0 48px;
+            font-size: 16px;
+            min-height: 60px;
+            color: #fff;
+            border-left: 1px solid $grey;
+            display: flex;
+            align-items: center;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                left: 20px;
+                width: 20px;
+                height: 20px;
+                background-image: url(../images/star.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            span {
+                height: 24px;
+                width: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $grey;
+                border-radius: 5px;
+            }
+        }
+        &-basket {
+            padding: 0 20px 0 48px;
+            font-size: 16px;
+            min-height: 60px;
+            color: #fff;
+            border-left: 1px solid $grey;
+            border-right: 1px solid $grey;
+            display: flex;
+            align-items: center;
+            position: relative;
+&::before{
+                content: '';
+                position: absolute;
+                left: 20px;
+                width: 20px;
+                height: 20px;
+                background-image: url(../images/basket.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            span {
+                height: 24px;
+                width: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $accent;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.black {
+    display: flex;
+    &__search {
+        background-image: url(../images/search.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 14px;
+        height: 14px;
+        margin-right: 20px;
+    }
+    &__login {
+        padding: 0 20px;
+        height: 50px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: $grey;
+            width: 1px;
+            height: 50px;
+            left: 0;
+            top: 0px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $grey;
+            width: 1px;
+            height: 50px;
+            right: 0;
+            top: 0px;
+        }
+    }
+}
+.top{
+    background-color: $bggrey;
+    &__slider{
+        background-color: $bggrey;
+     background-repeat: no-repeat;
+     background-position: center; 
+     background-size: cover; 
+    }
 }
